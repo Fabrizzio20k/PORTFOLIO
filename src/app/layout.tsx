@@ -1,3 +1,5 @@
+import { Navbar } from "@/components"
+
 export default function RootLayout({
     children,
   }: {
@@ -6,7 +8,7 @@ export default function RootLayout({
     return (
       <html lang="es">
         <body>
-            <div>Header</div>
+            <Navbar />
             {children}
         </body>
       </html>
