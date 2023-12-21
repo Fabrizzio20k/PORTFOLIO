@@ -15,8 +15,7 @@
     "hamburger-react": "^2.5.0",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18",
-    "typewriter-effect": "^2.21.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
