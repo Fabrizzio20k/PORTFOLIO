@@ -12,28 +12,47 @@ function Navbar() {
         console.log(isOpen);
     }, [isOpen]);
 
+    useEffect(() => {
+        const checkWindowSize = () => {
+            if (window.innerWidth > 960 && isOpen) {
+                setIsOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", checkWindowSize);
+
+        return () => {
+            window.removeEventListener("resize", checkWindowSize);
+        };
+    }, [isOpen]);
+
     return (
-        <main>
-            <nav className={styles.navbar}>
-                <div>
-                    <Link href={"/"} className={styles.noDecoration}>
-                        <h1 className={styles.textLogo}>Fabrizzio.dev</h1>
-                    </Link>
-                </div>
-                <ul className={styles.navUL}>
-                    <li className={styles.hamburguer}>
-                        <Hamburger rounded toggled={isOpen} toggle={setIsOpen} />
-                    </li>
-                    <li className={styles.menu}>
-                        {routes.map((route, index) => (
-                            <Link href={route.path} key={index} className={`${styles.noDecoration} ${styles.links}`}>
-                                {route.name}
-                            </Link>
-                        ))}
-                    </li>
-                </ul>
-            </nav>
-        </main>
+        <nav className={styles.navbar}>
+            <div>
+                <Link href={"/"} className={styles.linkLogo}>
+                    <h1 className={styles.textLogo}>Fabrizzio.dev</h1>
+                </Link>
+            </div>
+            <ul className={styles.navUL}>
+                <li className={styles.hamburguer}>
+                    <Hamburger rounded={true} toggled={isOpen} toggle={setIsOpen} />
+                </li>
+                {isOpen && (<div className={styles.fullScreenMenu}>
+                    {routes.map((route, index) => (
+                        <Link href={route.path} key={index} className={`${styles.links} ${styles.linkMobile}`} onClick={() => setIsOpen(false)}>
+                            {route.name}
+                        </Link>
+                    ))}
+                </div>)}
+                <li className={styles.menu}>
+                    {routes.map((route, index) => (
+                        <Link href={route.path} key={index} className={`${styles.links}`}>
+                            {route.name}
+                        </Link>
+                    ))}
+                </li>
+            </ul>
+        </nav>
     )
 }
 
