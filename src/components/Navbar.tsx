@@ -4,7 +4,8 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { routes } from "@/components/routes";
 import styles from "@/styles/Navbar.module.css";
-import { Turn as Hamburger } from 'hamburger-react'
+import { Turn as Hamburger } from 'hamburger-react';
+import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ function Navbar() {
         };
     }, [isOpen]);
 
-    const [size, setSize] = useState(32); // Tamaño inicial del icono
+    const [size, setSize] = useState(32);
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,7 +39,7 @@ function Navbar() {
         };
 
         window.addEventListener('resize', handleResize);
-        handleResize(); // Llama a la función al montar el componente
+        handleResize();
 
         return () => {
             window.removeEventListener('resize', handleResize);
@@ -54,13 +55,23 @@ function Navbar() {
                 <li className={styles.hamburguer}>
                     <Hamburger rounded={true} toggled={isOpen} toggle={setIsOpen} size={size} />
                 </li>
-                {isOpen && (<div className={styles.fullScreenMenu}>
-                    {routes.map((route, index) => (
-                        <Link href={route.path} key={index} className={`${styles.links} ${styles.linkMobile}`} onClick={() => setIsOpen(false)}>
-                            {route.name}
-                        </Link>
-                    ))}
-                </div>)}
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            className={styles.fullScreenMenu}
+                            initial={{ x: '-100vw' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '-100vw' }}
+                            transition={{ type: 'tween', duration: 0.4 }}
+                        >
+                            {routes.map((route, index) => (
+                                <Link href={route.path} key={index} className={`${styles.links} ${styles.linkMobile}`} onClick={() => setIsOpen(false)}>
+                                    {route.name}
+                                </Link>
+                            ))}
+                        </motion.div>
+                    )}
+                </AnimatePresence>
                 <li className={styles.menu}>
                     {routes.map((route, index) => (
                         <Link href={route.path} key={index} className={`${styles.links}`}>

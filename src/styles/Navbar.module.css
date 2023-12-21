@@ -35,9 +35,7 @@
     width: 100%;
     height: 100%;
     background: rgb(255, 255, 255);
-    /* Cambia esto a tu color de fondo preferido */
     z-index: 1000;
-    /* Asegúrate de que este valor sea mayor que el de cualquier otro elemento de la página */
     display: flex;
     flex-direction: column;
     justify-content: center;
