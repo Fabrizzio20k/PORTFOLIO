@@ -30,7 +30,7 @@ function Navbar() {
         <nav className={styles.navbar}>
             <div>
                 <Link href={"/"} className={styles.linkLogo}>
-                    <h1 className={styles.textLogo}>Fabrizzio.dev</h1>
+                    <h1 className={styles.textLogo}>&lt;Fabrizzio.dev /&gt;</h1>
                 </Link>
             </div>
             <ul className={styles.navUL}>
