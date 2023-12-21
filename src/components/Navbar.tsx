@@ -14,7 +14,7 @@ function Navbar() {
 
     useEffect(() => {
         const checkWindowSize = () => {
-            if (window.innerWidth > 768 && isOpen) {
+            if (window.innerWidth > 800 && isOpen) {
                 setIsOpen(false);
             }
         };
@@ -26,16 +26,33 @@ function Navbar() {
         };
     }, [isOpen]);
 
+    const [size, setSize] = useState(32); // Tamaño inicial del icono
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 400) {
+                setSize(window.innerWidth / 12);
+            } else {
+                setSize(32);
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Llama a la función al montar el componente
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <nav className={styles.navbar}>
-            <div>
-                <Link href={"/"} className={styles.linkLogo}>
-                    <h1 className={styles.textLogo}>&lt;Fabrizzio.dev /&gt;</h1>
-                </Link>
-            </div>
+            <Link href={"/"} className={styles.linkLogo}>
+                <h1 className={styles.textLogo}>&lt;Fabrizzio.dev /&gt;</h1>
+            </Link>
             <ul className={styles.navUL}>
                 <li className={styles.hamburguer}>
-                    <Hamburger rounded={true} toggled={isOpen} toggle={setIsOpen} />
+                    <Hamburger rounded={true} toggled={isOpen} toggle={setIsOpen} size={size} />
                 </li>
                 {isOpen && (<div className={styles.fullScreenMenu}>
                     {routes.map((route, index) => (
