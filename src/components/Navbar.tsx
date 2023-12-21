@@ -14,7 +14,7 @@ function Navbar() {
 
     useEffect(() => {
         const checkWindowSize = () => {
-            if (window.innerWidth > 960 && isOpen) {
+            if (window.innerWidth > 768 && isOpen) {
                 setIsOpen(false);
             }
         };

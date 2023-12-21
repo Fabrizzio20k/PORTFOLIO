@@ -109,7 +109,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
     .menu {
         display: none;
     }
