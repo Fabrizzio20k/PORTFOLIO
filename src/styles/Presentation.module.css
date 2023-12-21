@@ -27,7 +27,6 @@
 }
 
 .column1 {
-    border: 5px solid yellow;
     width: 50%;
     display: flex;
     align-items: center;
@@ -36,7 +35,6 @@
 }
 
 .column2 {
-    border: 5px solid yellow;
     width: 50%;
     display: flex;
     align-items: center;
@@ -55,7 +53,7 @@
 
 .textPresentation {
     font-family: 'Space Mono', monospace;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bolder;
     color: #000000;
     text-align: left;
@@ -132,9 +130,28 @@
     .paragraphPresentation {
         text-align: center;
     }
+}
+
+@media screen and (max-width: 400px) {
+    .columnsPresentation {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
     .shape {
-        width: 15rem;
-        height: 15rem;
+        height: 70vw;
+        width: 70vw;
+    }
+
+    .textPresentation {
+        font-size: 12vw;
+    }
+
+    .paragraphPresentation {
+        font-size: 5vw;
+    }
+
+    .mediaIcons {
+        font-size: 10vw;
     }
 }
