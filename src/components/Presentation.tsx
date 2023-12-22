@@ -32,7 +32,7 @@ function Presentation() {
                             }}
                         />
                     </h1>
-                    <h3 className={styles.paragraphPresentation}>Hi, I&apos;m Fabrizzio Vilchez, just a passionated fullstack developer from Lima, Perú 🇵🇪 </h3>
+                    <h3 className={styles.paragraphPresentation}>Hi, I&apos;m Fabrizzio Vilchez, just a passionated Full Stack Developer from Lima, Perú 🇵🇪 </h3>
                     <div className={styles.socialMedia}>
                         <Link href={"https://www.instagram.com/its_fabrizzio_ve/?hl=es"} className={styles.mediaIcons} target="_blank">
                             <FaInstagram />
