@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import Typewriter from 'typewriter-effect';
-import { Section } from "./Section";
+import { Section } from "../components/Section";
 function Presentation() {
 
     return (
