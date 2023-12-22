@@ -9,9 +9,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    useEffect(() => {
-        console.log(isOpen);
-    }, [isOpen]);
 
     useEffect(() => {
         const checkWindowSize = () => {
