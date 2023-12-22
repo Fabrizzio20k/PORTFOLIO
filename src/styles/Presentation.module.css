@@ -10,7 +10,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
-    width: 70%;
+    width: 80%;
     height: auto;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -19,7 +19,7 @@
 .column1 {
     width: 50%;
     display: flex;
-    align-items: center;
+    align-items: self-start;
     justify-content: center;
     flex-direction: column;
 }

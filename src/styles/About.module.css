@@ -1,0 +1,136 @@
+.RowsAbout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.Row1 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Row2 {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    word-break: keep-all;
+}
+
+.Text {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #636363;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    word-break: keep-all;
+}
+
+.Image {
+    max-width: 384px;
+    max-height: 216px;
+    --color: #b3b3b3;
+    --border: 10px;
+    --offset: 10px;
+    --gap: 5px;
+
+    --_c: var(--color) var(--border), #0000 0 calc(100% - var(--border)), var(--color) 0;
+    --_o: calc(3*var(--offset));
+    padding:
+        calc(var(--gap) + var(--border)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border) + var(--offset)) calc(var(--gap) + var(--border));
+    background:
+        linear-gradient(var(--_c)) var(--_o) var(--_o),
+        linear-gradient(90deg, var(--_c)) var(--_o) var(--_o);
+    background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
+    background-repeat: no-repeat;
+    filter: grayscale(.4);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.Image:hover {
+    background-position: 0px 0px;
+    background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
+    filter: grayscale(0);
+}
+
+@media screen and (max-width: 1200px) {
+    .RowsAbout {
+        flex-direction: column;
+        width: auto;
+    }
+
+    .Row1 {
+        width: auto;
+        order: 1;
+    }
+
+    .Row2 {
+        align-items: center;
+        width: auto;
+        order: 2;
+    }
+
+    .Text {
+        text-align: center;
+        margin: 0 80px;
+    }
+
+    .Title {
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+    .Image {
+        width: 80vw;
+        height: 45vw;
+    }
+
+    .Text {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .RowsAbout {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .Title {
+        font-size: 10vw;
+    }
+
+    .Text {
+        font-size: 5vw;
+    }
+
+    .Image {
+        --border: 2vw;
+        --offset: 2vw;
+    }
+}

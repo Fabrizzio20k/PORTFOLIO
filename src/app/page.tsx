@@ -1,6 +1,6 @@
 "use client";
 
-import { Presentation, About, Skills, Projects, Contact } from "@/pages";
+import { Presentation, About, Skills, Projects, Contact } from "@/pages/Index";
 import { Element } from 'react-scroll'
 
 export default function Page() {
