@@ -22,7 +22,7 @@ function Presentation() {
                                     .typeString('Backend')
                                     .pauseFor(1000)
                                     .deleteAll()
-                                    .typeString('Fullstack developer here 👋')
+                                    .typeString('FullStack developer here 👋')
                                     .pauseFor(20000)
                                     .start();
                             }}
