@@ -6,23 +6,23 @@ interface Route {
 const routes: Route[] = [
     {
         name: 'Home',
-        path: '/',
+        path: '/#home',
     },
     {
         name: 'About',
-        path: '/about',
+        path: '/#about',
     },
     {
         name: 'Skills',
-        path: '/skills',
+        path: '/#skills',
     },
     {
         name: 'Projects',
-        path: '/projects',
+        path: '/#projects',
     },
     {
         name: 'Contact',
-        path: '/contact',
+        path: '/#contact',
     },
 ]
 
