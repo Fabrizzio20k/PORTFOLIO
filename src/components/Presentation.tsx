@@ -6,10 +6,11 @@ import { FaInstagram } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import Typewriter from 'typewriter-effect';
+import { Section } from "./Section";
 function Presentation() {
 
     return (
-        <div className={styles.mainPresentation}>
+        <Section color="#f5f5f5" flexDirection="column">
             <div className={styles.columnsPresentation}>
                 <div className={styles.column1}>
                     <h1 className={styles.textPresentation}>
@@ -50,7 +51,7 @@ function Presentation() {
                     </div>
                 </div>
             </div>
-        </div>
+        </Section>
     )
 }
 
