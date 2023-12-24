@@ -1,3 +1,11 @@
+.RowsGeneral {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
 .RowsAbout {
     display: flex;
     flex-direction: row;
@@ -47,10 +55,14 @@
     word-break: keep-all;
 }
 
+.TopFix {
+    margin-top: 0 !important;
+}
+
 .Image {
     max-width: 384px;
     max-height: 216px;
-    --color: #b3b3b3;
+    --color: #5c497a;
     --border: 10px;
     --offset: 10px;
     --gap: 5px;
