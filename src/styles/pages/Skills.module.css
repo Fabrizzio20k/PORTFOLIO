@@ -1,0 +1,102 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 80px 0;
+}
+
+.Title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    word-break: keep-all;
+    width: 100%;
+}
+
+.SkillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.Skill {
+    flex: 1 0 calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    min-width: 200px;
+    height: auto;
+}
+
+.SkillTitle {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #000000;
+    text-align: center;
+    margin: 0;
+    word-break: keep-all;
+    width: 100%;
+}
+
+.SkillIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    width: auto;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.SkillIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.SkillIcon:hover {
+    filter: brightness(0.5);
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 600px) {
+    .Skill {
+        flex: 1 0 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Skill {
+        flex: 1 0 100%;
+
+    }
+
+    .SkillTitle {
+        font-size: 7vw;
+    }
+
+    .Title {
+        font-size: 10vw;
+    }
+
+    .SkillIcon {
+        font-size: 20vw;
+    }
+
+}

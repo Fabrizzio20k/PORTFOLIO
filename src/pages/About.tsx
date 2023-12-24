@@ -1,6 +1,6 @@
 import { Section } from "@/components";
 import Image from "next/image";
-import styles from "@/styles/About.module.css";
+import styles from "@/styles/pages/About.module.css";
 
 function About() {
     return (

@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "@/styles/Presentation.module.css";
+import styles from "@/styles/pages/Presentation.module.css";
 import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineLinkedin } from "react-icons/ai";
