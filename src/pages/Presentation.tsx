@@ -24,7 +24,7 @@ function Presentation() {
                                     .pauseFor(1000)
                                     .deleteAll()
                                     .typeString('Full Stack Developer here 👋')
-                                    .pauseFor(20000)
+                                    .pauseFor(30000)
                                     .start();
                             }}
                             options={{
