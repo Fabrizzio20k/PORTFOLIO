@@ -66,6 +66,7 @@ function Navbar() {
                             {routes.map((route, index) => (
                                 <Link href={route.path} key={index} className={`${styles.links} ${styles.linkMobile}`} onClick={(e: any) => {
                                     e.preventDefault();
+                                    window.location.hash = route.path.substring(2);
                                     setIsOpen(false);
                                     if (route.path) {
                                         scroller.scrollTo(route.path.substring(2), {
