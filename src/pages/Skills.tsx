@@ -1,5 +1,5 @@
 import { Section } from "@/components";
-import { FaHtml5, FaCss3, FaReact, FaVuejs, FaNodeJs, FaPython, FaCrow, FaAws, FaDocker, FaCss3Alt } from "react-icons/fa";
+import { FaHtml5, FaReact, FaVuejs, FaNodeJs, FaPython, FaCrow, FaAws, FaDocker, FaCss3Alt } from "react-icons/fa";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs, SiExpress, SiCplusplus, SiPostgresql, SiMongodb, SiFlask } from "react-icons/si";
