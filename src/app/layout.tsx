@@ -19,6 +19,8 @@ export const metadata: Metadata = {
       name: 'Fabrizzio Vilchez',
     },
   ],
+  robots: 'follow, index',
+  generator: 'NextJS'
 }
 
 export default function RootLayout({
