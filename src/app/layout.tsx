@@ -20,7 +20,8 @@ export const metadata: Metadata = {
     },
   ],
   robots: 'follow, index',
-  generator: 'NextJS'
+  generator: 'NextJS',
+  creator: 'Fabrizzio Vilchez',
 }
 
 export default function RootLayout({
