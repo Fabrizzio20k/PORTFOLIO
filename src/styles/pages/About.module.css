@@ -129,8 +129,7 @@
 
 @media screen and (max-width: 400px) {
     .RowsAbout {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 
     .Title {
