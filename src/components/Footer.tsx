@@ -10,17 +10,12 @@ import axios from "axios";
 
 function Footer() {
     const [date, setDate] = useState<string>("");
-    // ? Error in request
 
     useEffect(() => {
         const getDateTime = async () => {
-            const data = await axios.get("https://timeapi.io/api/Time/current/zone?timeZone=America/Bogota", {
-                'headers': {
-                    "Content-Type": "application/json",
-                    "Access - Control - Allow - Origin": "*",
-                }
-            });
-            console.log(data);
+            const { data } = await axios.get("https://worldtimeapi.org/api/timezone/America/Bogota");
+            const date = new Date(data.datetime);
+            setDate(date.getFullYear().toString());
         };
         getDateTime();
     }, []);
@@ -29,7 +24,7 @@ function Footer() {
             <div className={styles.Container}>
                 <div className={styles.Copyright}>
                     <h3 className={styles.Text}>
-                        Copyright &copy; 2023. Made with ❤ using <SiNextdotjs />
+                        Copyright &copy; {date === "" ? '2023' : date}. Made with ❤ using <SiNextdotjs />
                     </h3>
                 </div>
                 <div className={styles.Social}>
