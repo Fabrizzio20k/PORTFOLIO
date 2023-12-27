@@ -3,6 +3,7 @@ import { FaHtml5, FaReact, FaVuejs, FaNodeJs, FaPython, FaCrow, FaAws, FaDocker,
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiNextdotjs, SiExpress, SiCplusplus, SiPostgresql, SiMongodb, SiFlask } from "react-icons/si";
+import { PiTreeStructure } from "react-icons/pi";
 import { FcLinux } from "react-icons/fc";
 import styles from "@/styles/pages/Skills.module.css";
 
@@ -159,6 +160,13 @@ function Skills() {
                                 <FaDocker style={
                                     {
                                         color: "#0db7ed",
+                                    }
+                                } />
+                            </div>
+                            <div className={styles.SkillIcon}>
+                                <PiTreeStructure style={
+                                    {
+                                        color: "#000000",
                                     }
                                 } />
                             </div>
