@@ -1,3 +1,26 @@
+.Title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    word-break: keep-all;
+    width: 100%;
+}
+
+.Text {
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #636363;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    word-break: keep-all;
+    width: auto;
+}
+
 .Container {
     display: flex;
     flex-direction: column;
@@ -6,19 +29,112 @@
     width: 80%;
     padding: 0;
     margin: 80px 0;
-    border: 5px solid blue;
 }
 
 .Contacts {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .Contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    margin-right: 50px;
+    padding: 10px 20px;
+}
+
+.Link {
+    background-color: white;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    margin-right: 15px;
+    color: #254755;
+}
+
+.LinkTx {
+    text-decoration: none;
+}
+
+.LinkDescription {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #000000;
+    text-align: left;
+    margin: 15px 0;
+    padding: 10px;
+    word-break: keep-all;
+    width: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .Title {
+        text-align: center;
+    }
+
+    .Text {
+        text-align: center;
+    }
+
+    .Container {
+        align-items: center;
+    }
+
+    .Contacts {
+        justify-content: center;
+    }
+
+    .Contact {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .Title {
+        font-size: 10vw;
+    }
+
+    .Text {
+        font-size: 5vw;
+    }
+
+    .Container {
+        margin: 10px 0;
+    }
+
+    .Link {
+        font-size: 7vw;
+        margin-right: 5vw;
+    }
+
+    .LinkDescription {
+        font-size: 5vw;
+        padding: 5px;
+        word-break: normal;
+        margin: 5vw 0;
+    }
+
+    .Contact {
+        padding: 10px 0;
+    }
 }
