@@ -1,6 +1,6 @@
 .Container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: stretch;
     width: 80%;
@@ -18,5 +18,31 @@
     margin: 0;
     padding: 20px;
     word-break: keep-all;
-    width: 100%;
+    width: auto;
+}
+
+.ProjectsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .Title {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Title {
+        font-size: 10vw;
+    }
+
+    .Container {
+        margin: 10px;
+    }
 }
