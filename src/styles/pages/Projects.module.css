@@ -1,0 +1,22 @@
+.Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    width: 80%;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.Title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 20px;
+    word-break: keep-all;
+    width: 100%;
+}
