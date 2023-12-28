@@ -4,6 +4,7 @@ import { FiGithub } from "react-icons/fi";
 import { IoOpenOutline } from "react-icons/io5";
 import { FaRegFaceDizzy } from "react-icons/fa6";
 import Image from "next/image";
+import styles from "@/styles/ProjectCard.module.css";
 
 interface CardProps {
     title: string;
@@ -19,17 +20,18 @@ interface CardProps {
 
 function ProjectCard(props: CardProps) {
     return (
-        <div>
-            <div>
+        <div className={styles.CardContainer}>
+            <div className={`${styles.ImageContainer} ${props.align === "left" ? "" : styles.first}`}>
                 <Image
                     src={props.imageLink}
                     alt={props.title}
                     width={480}
                     height={270}
                     loading="lazy"
+                    className={styles.Image}
                 />
             </div>
-            <div>
+            <div className={`${styles.Content} ${props.align === "left" ? styles.Mleft : styles.Mright}`}>
                 <div>
                     <h1>{props.title}</h1>
                     <h2>{props.date}</h2>

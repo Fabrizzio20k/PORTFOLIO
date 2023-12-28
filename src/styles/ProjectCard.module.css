@@ -1,0 +1,65 @@
+.CardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px 0;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #f5f5f5;
+}
+
+.first {
+    order: 1;
+}
+
+.Mleft {
+    margin-left: 30px;
+}
+
+.Mright {
+    margin-right: 30px;
+}
+
+.ImageContainer {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 15px;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Image {
+    object-fit: cover;
+    width: 100%;
+
+    height: 100%;
+}
+
+.Content {
+    border: 2px solid red;
+    width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .CardContainer {
+        flex-direction: column;
+    }
+
+    .ImageContainer {
+        width: 100%;
+        height: 50%;
+    }
+
+    .Content {
+        width: 100%;
+        height: 50%;
+    }
+
+}

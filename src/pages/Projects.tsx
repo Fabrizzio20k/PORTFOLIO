@@ -42,7 +42,9 @@ function Projects() {
     return (
         <Section color="white" flexDirection="column">
             <div className={styles.Container}>
-                <h1 className={styles.Title}>Projects</h1>
+                <div className={styles.TitleContainer}>
+                    <h1 className={styles.Title}>Projects</h1>
+                </div>
                 <div className={styles.ProjectsContainer}>
                     {projects.map((project, index) => (
                         <ProjectCard
