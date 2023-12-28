@@ -24,7 +24,11 @@ function Footer() {
             <div className={styles.Container}>
                 <div className={styles.Copyright}>
                     <h3 className={styles.Text}>
-                        Copyright &copy; {date === "" ? '2023' : date}. Made with ❤ using <SiNextdotjs />
+                        Copyright &copy; {date === "" ? '2023' : date}. Made with ❤ using <SiNextdotjs style={
+                            {
+                                verticalAlign: 'middle'
+                            }
+                        } />
                     </h3>
                 </div>
                 <div className={styles.Social}>
