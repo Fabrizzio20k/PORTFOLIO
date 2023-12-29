@@ -1,8 +1,7 @@
 import { ReactElement } from "react";
 import { IconType } from "react-icons";
 import { FiGithub } from "react-icons/fi";
-import { IoOpenOutline } from "react-icons/io5";
-import { FaRegFaceDizzy } from "react-icons/fa6";
+import { MdOutlineOpenInNew, MdOutlineOpenInNewOff } from "react-icons/md";
 import Image from "next/image";
 import styles from "@/styles/ProjectCard.module.css";
 
@@ -21,7 +20,7 @@ interface CardProps {
 function ProjectCard(props: CardProps) {
     return (
         <div className={styles.CardContainer}>
-            <div className={`${styles.ImageContainer} ${props.align === "left" ? "" : styles.first}`}>
+            <div className={styles.ImageContainer}>
                 <Image
                     src={props.imageLink}
                     alt={props.title}
@@ -31,30 +30,26 @@ function ProjectCard(props: CardProps) {
                     className={styles.Image}
                 />
             </div>
-            <div className={`${styles.Content} ${props.align === "left" ? styles.Mleft : styles.Mright}`}>
-                <div>
-                    <h1>{props.title}</h1>
-                    <h2>{props.date}</h2>
+            <div className={styles.Content}>
+                <div className={styles.Titles}>
+                    <h1 className={styles.Title}>{props.title}</h1>
+                    <h2 className={styles.Year}>{props.date}</h2>
                 </div>
-                <div>
+                <div className={styles.Description}>
                     <p>{props.description}</p>
                 </div>
-                <div>
+                <div className={styles.Technologies}>
                     {props.technologies}
                 </div>
-                <div>
-                    <div>
-                        <h3>Code</h3>
-                        <a href={props.linkCode} target="_blank" rel="noopener noreferrer">
-                            <FiGithub />
-                        </a>
-                    </div>
-                    <div>
-                        <h3>Live demo {props.isAvailable ? "" : "not available now"}</h3>
-                        <a href={props.linkDemo} target="_blank" rel="noopener noreferrer">
-                            {props.isAvailable ? <IoOpenOutline /> : <FaRegFaceDizzy />}
-                        </a>
-                    </div>
+                <div className={styles.Links}>
+                    <a href={props.linkCode} target="_blank" rel="noopener noreferrer" className={styles.Link}>
+                        <h3 className={styles.LinkDescriptor}>Code</h3>
+                        <FiGithub className={styles.Icon} />
+                    </a>
+                    <a href={props.linkDemo} target="_blank" rel="noopener noreferrer" className={`${props.isAvailable ? styles.Link : styles.LinkDisable}`}>
+                        <h3 className={styles.LinkDescriptor}>{props.isAvailable ? "Live demo" : "Not available"}</h3>
+                        {props.isAvailable ? <MdOutlineOpenInNew className={styles.Icon} /> : <MdOutlineOpenInNewOff className={styles.Icon} />}
+                    </a>
                 </div>
             </div>
         </div>

@@ -1,50 +1,139 @@
 .CardContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 30px;
+    margin: 20px;
     width: fit-content;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #f5f5f5;
 }
 
-.first {
-    order: 1;
-}
-
-.Mleft {
-    margin-left: 30px;
-}
-
-.Mright {
-    margin-right: 30px;
-}
-
 .ImageContainer {
-    width: 70%;
-    height: 100%;
+    width: 100%;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     border-radius: 15px;
-    max-width: 800px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .Image {
     object-fit: cover;
+    aspect-ratio: 16/9;
     width: 100%;
-
     height: 100%;
 }
 
 .Content {
-    border: 2px solid red;
-    width: 50%;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Titles {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 !important;
+}
+
+.Title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+}
+
+.Year {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #525252;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+    margin-right: 5px;
+}
+
+.Description {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    color: #000000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+    margin-right: 5px;
+}
+
+.Technologies {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    margin: 30px 0;
+}
+
+.Links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Link {
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.Link:hover {
+    color: #3155a1;
+}
+
+.LinkDisable {
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.LinkDescriptor {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+    margin-right: 5px;
+}
+
+.Icon {
+    vertical-align: middle;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -52,14 +141,61 @@
         flex-direction: column;
     }
 
-    .ImageContainer {
-        width: 100%;
-        height: 50%;
-    }
-
     .Content {
         width: 100%;
-        height: 50%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .CardContainer {
+        margin: 5vw 0;
+        padding: 5vw;
     }
 
+    .ImageContainer {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    .Titles {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Title {
+        font-size: 5vw;
+    }
+
+    .Year {
+        font-size: 5vw;
+    }
+
+    .Description {
+        font-size: 5vw;
+        word-break: break-all;
+    }
+
+    .Technologies {
+        font-size: 7vw;
+    }
+
+    .Links {
+        margin-top: 10px;
+    }
+
+    .Link {
+        padding: 0px 10px;
+    }
+
+    .LinkDisable {
+        padding: 0px 10px;
+    }
+
+    .LinkDescriptor {
+        font-size: 5vw;
+    }
+
+    .Icon {
+        font-size: 5vw;
+    }
 }
