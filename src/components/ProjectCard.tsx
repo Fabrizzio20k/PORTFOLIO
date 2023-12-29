@@ -26,7 +26,7 @@ function ProjectCard(props: CardProps) {
                     alt={props.title}
                     width={480}
                     height={270}
-                    loading="lazy"
+                    priority={true}
                     className={styles.Image}
                 />
             </div>
