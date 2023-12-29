@@ -7,7 +7,7 @@ import { PiTreeStructure } from "react-icons/pi";
 import { FcLinux } from "react-icons/fc";
 import styles from "@/styles/pages/Skills.module.css";
 
-function Skills() {
+export default function Skills() {
     return (
         <Section color="#f5f5f5" flexDirection="row">
             <div className={styles.Container}>
@@ -177,5 +177,3 @@ function Skills() {
         </Section >
     );
 }
-
-export { Skills };

@@ -7,8 +7,7 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { FiGithub } from "react-icons/fi";
 import Typewriter from 'typewriter-effect';
 import { Section } from "../components/Section";
-function Presentation() {
-
+export default function Presentation() {
     return (
         <Section color="#f5f5f5" flexDirection="column">
             <div className={styles.columnsPresentation}>
@@ -54,5 +53,3 @@ function Presentation() {
         </Section>
     )
 }
-
-export { Presentation };

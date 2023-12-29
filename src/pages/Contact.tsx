@@ -3,7 +3,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { GrMapLocation } from "react-icons/gr";
 import styles from "@/styles/pages/Contact.module.css";
 
-function Contact() {
+export default function Contact() {
     return (
         <Section color="#f5f5f5" flexDirection="column">
             <div className={styles.Container}>
@@ -33,5 +33,3 @@ function Contact() {
         </Section>
     );
 }
-
-export { Contact };

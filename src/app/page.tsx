@@ -1,25 +1,25 @@
 "use client";
 
-import { Presentation, About, Skills, Projects, Contact } from "@/pages/Index";
+import modules from '@/pages/Index';
 import { Element } from 'react-scroll'
 
 export default function Page() {
     return (
         <main>
             <Element name="home">
-                <Presentation />
+                <modules.Presentation />
             </Element>
             <Element name="about">
-                <About />
+                <modules.About />
             </Element>
             <Element name="skills">
-                <Skills />
+                <modules.Skills />
             </Element>
             <Element name="projects">
-                <Projects />
+                <modules.Projects />
             </Element>
             <Element name="contact">
-                <Contact />
+                <modules.Contact />
             </Element>
 
         </main>

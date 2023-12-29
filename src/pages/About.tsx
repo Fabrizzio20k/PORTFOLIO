@@ -2,7 +2,7 @@ import { Section } from "@/components";
 import Image from "next/image";
 import styles from "@/styles/pages/About.module.css";
 
-function About() {
+export default function About() {
     return (
         <Section color="white" flexDirection="row">
             <div className={styles.RowsGeneral}>
@@ -53,6 +53,4 @@ function About() {
         </Section>
     )
 }
-
-export { About };
 

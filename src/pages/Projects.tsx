@@ -143,7 +143,7 @@ const projects = [
     },
 ];
 
-function Projects() {
+export default function Projects() {
     return (
         <Section color="white" flexDirection="column">
             <div className={styles.Container}>
@@ -170,5 +170,3 @@ function Projects() {
         </Section>
     );
 }
-
-export { Projects };
